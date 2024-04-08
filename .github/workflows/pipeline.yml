@@ -42,7 +42,7 @@ jobs:
       - name: create env
         run: |
           touch .env
-          echo URI=${{ secrets.URI }} >> .env
+          echo MONGODB_URI=${{ secrets.URI }} >> .env
           echo PORT=${{ secrets.PORT }} >> .env
 
       - name: e2e tests
