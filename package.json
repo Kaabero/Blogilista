@@ -2,5 +2,10 @@
   "devDependencies": {
     "cypress": "^13.7.2",
     "eslint-plugin-cypress": "^2.15.1"
+  },
+  "scripts": {
+    "cypress:open": "cd ./frontend && cypress open",
+    "test:e2e": "cd ./frontend && cypress run",
+    "start:prod": "cd ./backend && npm run start"
   }
 }
