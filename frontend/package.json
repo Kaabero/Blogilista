@@ -13,7 +13,8 @@
     "preview": "vite preview",
     "test": "jest",
     "cypress:open": "cypress open",
-    "test:e2e": "cypress run"
+    "test:e2e": "cypress run",
+    "start:prod": "cd ../backend && npm run start"
   },
   "jest": {
     "testEnvironment": "jsdom",
