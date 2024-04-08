@@ -1,6 +1,6 @@
 describe('Blog app', function() {
   beforeEach(function() {
-
+  /* eslint-disable no-undef */
     cy.request('POST', 'http://localhost:3003/api/testing/reset')
     const user = {
       name: 'Test User',
