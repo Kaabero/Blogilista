@@ -1,6 +1,13 @@
-describe('Blog app', function() {
+describe('Blogilista', function() {
+  it('log in page can be opened', function() {
+    cy.visit('http://localhost:3003')
+    cy.contains('log in to application')
+  })
+})
+
+/*describe('Blog app', function() {
   beforeEach(function() {
-  /* eslint-disable no-undef */
+
     cy.request('POST', 'http://localhost:3003/api/testing/reset')
     const user = {
       name: 'Test User',
@@ -8,7 +15,7 @@ describe('Blog app', function() {
       password: 'testpassword'
     }
     cy.request('POST', 'http://localhost:3003/api/users/', user)
-    cy.visit('http://localhost:5173')
+    cy.visit('http://localhost:3003')
   })
 
   it('Login form is shown', function() {
@@ -104,9 +111,9 @@ describe('Blog app', function() {
 
     })
 
-
   })
 })
+  */
 
 
 

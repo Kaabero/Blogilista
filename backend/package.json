@@ -42,6 +42,7 @@
   "license": "MIT",
   "jest": {
     "testEnvironment": "node",
-    "globalTeardown": "./tests/teardown.js"
+    "globalTeardown": "./tests/teardown.js",
+    "testPathIgnorePatterns": ["e2e-tests"]
   }
 }

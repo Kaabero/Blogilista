@@ -19,7 +19,10 @@
     "testEnvironment": "jsdom",
     "moduleNameMapper": {
       "^.+\\.svg$": "jest-svg-transformer",
-      "^.+\\.(css|less|scss)$": "identity-obj-proxy"
+      "^.+\\.(css|less|scss)$": "identity-obj-proxy",
+      "testPathIgnorePatterns": [
+        "e2e-tests"
+      ]
     }
   },
   "dependencies": {
@@ -37,6 +40,7 @@
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
+    "cypress": "^13.7.2",
     "eslint": "^8.45.0",
     "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-jest": "^27.6.0",
