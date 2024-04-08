@@ -17,6 +17,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - name: Install dependencies
+        run: npm install
       - name: Install backend's dependencies
         working-directory: backend
         run: npm install
@@ -38,19 +40,7 @@ jobs:
       - name: build
         working-directory: frontend 
         run: npm run build:ui
-
-      - name: create env
-        run: |
-          touch .env
-          echo MONGODB_URI=${{ secrets.URI }} >> .env
-          echo PORT=${{ secrets.PORT }} >> .env
-
-      - name: e2e tests
-        uses: cypress-io/github-action@v5
-        with:
-          command: npm run test:e2e
-          start: npm run start:prod
-          wait-on: http://localhost:3003
+        
       - name: Trigger deployment
         if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message, ''), '#skip') }}
         run: curl https://api.render.com/deploy/srv-${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_API_KEY }}

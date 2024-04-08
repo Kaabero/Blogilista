@@ -1,11 +1,4 @@
-describe('Blogilista', function() {
-  it('log in page can be opened', function() {
-    cy.visit('http://localhost:3003')
-    cy.contains('log in to application')
-  })
-})
-
-/*describe('Blog app', function() {
+describe('Blog app', function() {
   beforeEach(function() {
 
     cy.request('POST', 'http://localhost:3003/api/testing/reset')
@@ -113,7 +106,7 @@ describe('Blogilista', function() {
 
   })
 })
-  */
+
 
 
 
