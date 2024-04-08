@@ -9,7 +9,10 @@
     "cypress:open": "cd ./frontend && cypress open",
     "test:e2e": "cd ./frontend && cypress run",
     "start:prod": "cd ./backend && npm run start",
-    "build:ui": "cd frontend && rm -rf dist && npm run build && cp -r dist ../backend"
-    
+    "build:ui": "cd frontend && rm -rf dist && npm run build && cp -r dist ../backend",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install"
+
+
   }
 }
