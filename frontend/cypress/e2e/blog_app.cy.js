@@ -77,7 +77,7 @@ describe('Blog app', function() {
 
     })
 
-    it.only('only the creator can see the delete button of a blog, not anyone else.', function() {
+    it('only the creator can see the delete button of a blog, not anyone else.', function() {
 
       const anotherUser = {
         name: 'Test User 2',
