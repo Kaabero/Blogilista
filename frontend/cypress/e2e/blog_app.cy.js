@@ -1,13 +1,13 @@
 describe('Blog app', function() {
   beforeEach(function() {
 
-    cy.request('POST', 'http://localhost:3003/api/testing/reset')
+    cy.request('POST', `${Cypress.env('BACKEND')}/testing/reset`)
     const user = {
       name: 'Test User',
       username: 'testuser',
       password: 'testpassword'
     }
-    cy.request('POST', 'http://localhost:3003/api/users/', user)
+    cy.request('POST', `${Cypress.env('BACKEND')}/users`, user)
     cy.visit('http://localhost:3003')
   })
 
@@ -77,7 +77,7 @@ describe('Blog app', function() {
 
     })
 
-    it.only('only the creator can see the delete button of a blog, not anyone else.', function() {
+    it('only the creator can see the delete button of a blog, not anyone else.', function() {
 
       const anotherUser = {
         name: 'Test User 2',
