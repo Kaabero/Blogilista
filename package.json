@@ -11,7 +11,8 @@
     "start:test": "cd ./backend && npm run start:test",
     "build:ui": "cd frontend && rm -rf dist && npm run build && cp -r dist ../backend",
     "install:backend": "cd backend && npm install",
-    "install:frontend": "cd frontend && npm install"
+    "install:frontend": "cd frontend && npm install",
+    "start:prod": "cd ./backend && npm run start"
 
 
   }
