@@ -14,7 +14,8 @@
     "test": "jest",
     "cypress:open": "cypress open",
     "test:e2e": "cypress run",
-    "start:prod": "cd ../backend && npm run start"
+    "start:prod": "cd ../backend && npm run start",
+    "dep_install": "winpty docker run -it --rm -v /$(pwd):/usr/src/app todo-front-dev npm install"
   },
   "jest": {
     "testEnvironment": "jsdom",

@@ -13,7 +13,5 @@
     "install:backend": "cd backend && npm install",
     "install:frontend": "cd frontend && npm install",
     "start:prod": "cd ./backend && npm run start"
-
-
   }
 }
